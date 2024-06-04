@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  php:
+    build: .
+    container_name: php-app-novo
+    ports:
+      - "8888:80"
+    volumes:
+      - ./src:/var/www/html
+    networks:
+      - app-network
+networks:
+  app-network:
